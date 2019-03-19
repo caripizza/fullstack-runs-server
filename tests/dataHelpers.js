@@ -23,7 +23,7 @@ afterAll(() => {
 
 const getDog = () => {
   return Dog
-    .findOne()
+    .findOne({ name: 'Dog #0' })
     .then(dog => {
       return JSON.parse(JSON.stringify(dog));
     });
